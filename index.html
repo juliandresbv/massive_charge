@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Plantar Futuro</title>
+
+        <!-- CSS -->
+        <link href="lib/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="lib/antd.css">
+    </head>
+    <body ng-app="massivecharge">
+        <div class="contentInner" ng-controller="massivechargectrl">
+            <div class="container-fluid">
+                <h4 class="ant-typography">Cargar Proyectos Masivamente</h4>
+                <hr class="hrColor">
+                <div class="ant-row">
+                    <div class="ant-col ant-col-24">
+                        <div class="ant-card ant-card-bordered">
+                            <div class="ant-card-head">
+                                <div class="ant-card-head-wrapper">
+                                    <div class="ant-card-head-title">
+                                        Carga Masiva
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ant-card-body">
+                                <div class="ant-col ant-col-12">
+                                    <js-xlsx onread="read" onerror="error"></js-xlsx>
+                                </div>
+                                <div class="ant-col ant-col-12">
+                                    <div style="display: flex; justify-content: flex-end">
+                                        <button class="ant-btn" ng-click="sendDataToServer()" class="btn btn-primary" style="width: 50%">
+                                            Cargar Excel
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCRIPTS -->
+
+        <!-- Jquery -->
+        <script src="lib/jquery.js"></script>
+
+        <!-- Angular js -->
+        <script src="lib/angular.js"></script>
+        <script src="lib/angular-route.js"></script>
+
+        <!-- Libraries -->
+        <script src="lib/angular-js-xlsx.js"></script>
+        <script src="lib/xlsx.full.min.js"></script>
+
+        <!-- Angular Programs -->
+        <script src="src/massivecharge.ctrls.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="lib/bootstrap.min.js"></script>
+
+        <!-- SweetAlert -->
+        <script src="lib/sweetalert2.all.min.js"></script>
+    </body>
+</html>
