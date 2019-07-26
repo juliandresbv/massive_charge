@@ -38,7 +38,7 @@
                 timer: 5000
             });
 
-            $http.post('http://plantarfuturo.com/ws/api/project/massive', topost)
+            $http.post('http://plantarfuturo.com/ws/api/project/xy', topost)
               .then(
                 (response) => {
                     Swal.fire({
